@@ -8,19 +8,7 @@ import Tabla from "../tabla/Tabla";
 const Home = () => {
   
 
-  useEffect(() => {
-    console.log(
-      "Se ejecuto el useEffect cuando se renderizo el componente por primera vez"
-    );
-  }, []);
-
-  useEffect(() => {
-    console.log("Se ejecuto el useEffect cuando se renderizo el componente");
-  });
-
-  useEffect(() => {
-    console.log("se ejecuto el useEffect cuando se modifica nuestra variable");
-  };
+  
 
   return (
     <>
