@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 import Login from "../login/Login";
 import Registro from "../registro/Registro";
+import css from "./navegacion.css"
 
 export const Navegador = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -19,7 +20,7 @@ export const Navegador = () => {
 
   return (
     <>
-      <Navbar bg="ligth" expand="lg">
+      <Navbar class="navbar" bg="ligth" expand="lg">
         <Container>
           <Navbar.Brand href="#home">E Commerce 5I</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -37,7 +38,7 @@ export const Navegador = () => {
                   Tecnología y computación
                 </NavDropdown.Item>
               </NavDropdown>
-              <Button variant="outline-success" onClick={() => setShowLogin(true)}>
+              <Button class="botonlogin" variant="outline-success" onClick={() => setShowLogin(true)}>
                 Login
               </Button>
             </Nav>
