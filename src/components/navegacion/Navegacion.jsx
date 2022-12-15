@@ -21,7 +21,7 @@ export const Navegador = () => {
     <>
       <Navbar bg="ligth" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Proyecto Final</Navbar.Brand>
+          <Navbar.Brand href="#home">E Commerce 5I</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -47,18 +47,18 @@ export const Navegador = () => {
 
       <Modal show={showLogin} onHide={() => setShowLogin(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Registro de usuario</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Login />
         </Modal.Body>
         <Modal.Footer>
           <p>
-            Aun no estas registrado?{" "}
-            <a onClick={() => [setShowLogin(false), setShowRegistro(true)]}>hace Click aqui </a>{" "}
+            ¿Aun no estas registrado?   {" "}
+            <a onClick={() => [setShowLogin(false), setShowRegistro(true)]}>Hacé Click <b>aquí</b></a>{" "}
           </p>
           <Button variant="secondary" onClick={() => setShowLogin(false)}>
-            Close
+            Cerrar
           </Button>{" "}
         </Modal.Footer>
       </Modal>
@@ -71,7 +71,7 @@ export const Navegador = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseRegistro}>
-            Close
+            Cerrar
           </Button>{" "}
         </Modal.Footer>
       </Modal>
