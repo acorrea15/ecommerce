@@ -10,7 +10,7 @@ const Rutas = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        {/* En vez de Dashboard tendría que tener el path de sobre nosotros */}
+        {/* En vez de Dashboard tendría que tener el path de sobre nosotro */}
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Routes>
