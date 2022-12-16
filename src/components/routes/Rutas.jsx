@@ -8,6 +8,7 @@ const Rutas = () => {
   return (
     <>
       <Routes>
+        {/* Cuando tenga las siguiente rutas, nos envía al componente home, registro, sobre nosotros etc.  */}
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         {/* En vez de Dashboard tendría que tener el path de sobre nosotro */}
