@@ -58,7 +58,7 @@ export const Navegador = () => {
             ¿Aun no estas registrado?   {" "}
             <a onClick={() => [setShowLogin(false), setShowRegistro(true)]}>Hacé Click <b>aquí</b></a>{" "}
           </p>
-          <Button variant="secondary" onClick={() => setShowLogin(false)}>
+          <Button class="botonlogin" variant="outline-success" onClick={() => setShowLogin(false)}>
             Cerrar
           </Button>{" "}
         </Modal.Footer>
