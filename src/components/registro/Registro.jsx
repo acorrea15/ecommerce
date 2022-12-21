@@ -77,8 +77,6 @@ const Registro = () => {
 
   return (
     <>
- 
-      <h1>Esto es un registro</h1>
         <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mt-4">
             <Form.Label>Nombre</Form.Label>

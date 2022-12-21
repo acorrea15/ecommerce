@@ -48,7 +48,7 @@ export const Navegador = () => {
 
       <Modal show={showLogin} onHide={() => setShowLogin(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Registro de usuario</Modal.Title>
+          <Modal.Title>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Login />
@@ -65,7 +65,7 @@ export const Navegador = () => {
       </Modal>
       <Modal show={showRegistro} onHide={handleCloseRegistro}>
         <Modal.Header closeButton>
-          <Modal.Title>Registro</Modal.Title>
+          <Modal.Title>Registro de Usuario</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Registro />
