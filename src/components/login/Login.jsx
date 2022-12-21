@@ -19,6 +19,15 @@ const Login = () => {
 // Recibimos un evento y le pasamos la lógica.
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // código de clase para utilizar el context que en clases futuras se modifica: 
+  //   try{
+  //     await loginUsuario(email, password),
+  //   } catch (error){
+  //     console.log(error)
+  //   }
+  // };
+
+
     console.log(email, password);
     if (email === "a@a.com" && password === "123456") {
       Swal.fire({
