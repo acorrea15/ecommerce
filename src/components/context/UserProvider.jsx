@@ -11,8 +11,8 @@ const UserProvider = ({children}) => {
 
     return (
 
-        // El user context sirve para pasar los componentes.
-        <userContext.Provider>
+        // El provider es el proveedor. Aquí ponemos los datos que queremos pasar. En este caso el user y la función login usuario.  
+        <userContext.Provider value={{user, loginUsuario}}>
             {children}
         </userContext.Provider>
     )
