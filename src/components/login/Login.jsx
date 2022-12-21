@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useContext } from "react";
 import { Form, Button, Modal } from "react-bootstrap";
 import Swal from "sweetalert2";
+import { userContext } from "../context/UserProvider";
 
 const Login = () => {
   // El useState nos da el estado inicial de los parámetros.  
@@ -8,9 +10,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // Con el hook useContext traemos la función loginUsuario desde el UserProvider.
+  // Le pasamos como parámetro el userContext que está en el UserProvider.
+  // Traemos entonces la función login del usuario. La función loginUsuario se utiliza en el handlesumbit
+  const {loginUsuario} = useContext (userContext)
+
 // La función handlesubmit sirve para enviar los datos del formulario. 
 // Recibimos un evento y le pasamos la lógica.
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(email, password);
     if (email === "a@a.com" && password === "123456") {
