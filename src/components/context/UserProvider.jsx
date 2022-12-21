@@ -1,7 +1,8 @@
 import React, {createContext} from 'react'
-
+// createContext es un componente de react que importamos.Guardamos todo en userContext (va a tener todos nuestros datos) 
 export const userContext = createContext()
 
+// Traemos children: son todos los datos que yo quiero disponibilizar en otros componentes. 
 const UserProvider = ({children}) => {
 
     const loginUsuario = (email, password) => {
@@ -9,10 +10,12 @@ const UserProvider = ({children}) => {
     }
 
     return (
+
+        // El user context sirve para pasar los componentes.
         <userContext.Provider>
             {children}
         </userContext.Provider>
     )
 }
 
-export defaul UserProvider
+export default UserProvider
