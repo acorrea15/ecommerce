@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import UserProvider from "./components/context/UserProvider";
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // El browserRouter va siempre en el index.js para comenzar a utilizar las rutas. 
