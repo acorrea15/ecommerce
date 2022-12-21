@@ -11,7 +11,7 @@ root.render(
   // El browserRouter va siempre en el index.js para comenzar a utilizar las rutas. 
   // Además, se crea el componente rutas y ese componente va en el app.js
   <BrowserRouter>
-  {/* /* Se incorpora el componente userProvider para trabajar con el context */} */}
+  {/* /* Se incorpora el componente userProvider para trabajar con el context */} 
   <UserProvider>
     <React.StrictMode>
       <App />
