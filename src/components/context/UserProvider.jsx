@@ -12,7 +12,7 @@ const UserProvider = ({children}) => {
     return (
 
         // El provider es el proveedor. Aquí ponemos los datos que queremos pasar. En este caso el user y la función login usuario.  
-        <userContext.Provider value={{user, loginUsuario}}>
+        <userContext.Provider >
             {children}
         </userContext.Provider>
     )
