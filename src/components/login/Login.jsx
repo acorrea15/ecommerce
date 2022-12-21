@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import { useContext } from "react";
 import { Form, Button, Modal } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { userContext } from "../context/UserProvider";

@@ -14,7 +14,13 @@ const UserProvider = ({children}) => {
     const [user, setUser] = useState("")
 
     const loginUsuario = (email, password) => {
-        console.log(email, password)
+    //    Creación de un objeto con los datos de usuario. 
+    const registroUser = {
+        email,
+        password,
+    }
+    setUser (registroUser)
+    
     }
 
     return (
