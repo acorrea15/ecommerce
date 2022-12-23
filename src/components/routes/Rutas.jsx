@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import Registro from "../registro/Registro";
 import Dashboard from "../pages/Dashboard";
 import { userContext } from "../context/UserProvider";
-import { userContext } from "../context/UserProvider";
+
 
 const Rutas = () => {
 
