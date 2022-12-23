@@ -14,21 +14,13 @@ const schema = yup.object({
 
 
 const Registro = () => {
+  // Establecemos el estado inicial de nombre, email, etc. con el UseState
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-
-
-    // TAREA: Crear un estado para el campo de confirmar contraseña
-    // Validar que la contraseña y la confirmación sean iguales
-    // Mostrar un mensaje de error si no son iguales
-    // Mostrar un mensaje de éxito si son iguales
-    // Limpiar los campos 
-    // Validaciones con expresiones regulares
-    // /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/
 
     const { register, formState: { errors }, handleSubmit, reset, setValue } = useForm();
  
