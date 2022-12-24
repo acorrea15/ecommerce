@@ -18,7 +18,7 @@ const UserProvider = ({ children }) => {
       password,
     };
     setUser(registroUser);
-    // Creación de local storage para almacenar los usuarios porque éstos no están almacenados en una base de datos: 
+    // Creación de local storage para almacenar los usuarios porque éstos no están almacenados en una base de datos: almacena lo que se inserta en el registroUser
     localStorage.setItem("registroUser"), JSON.stringify(registroUser)
   };
 
@@ -27,7 +27,7 @@ const UserProvider = ({ children }) => {
     // del componente userContext.Provider. No hace falta poner props x props (usuario, pass, etc) con poner children pasa todos los datos.
     // Dentro de la etiqueta value van los datos que compartimos/disponibilizamos: en este caso los usuarios y la función loginUsuario
     // Con lo siguiente decimos: userContext es nuestro proveedor de datos.
-    <userContext.Provider value={{ user, loginUsuario }}>
+    <userContext.Provider value={{ user, loginUsuario, registroUser }}>
       {children}
     </userContext.Provider>
   );

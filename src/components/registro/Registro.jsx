@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { Form, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
@@ -66,6 +66,8 @@ const Registro = () => {
     }
   };
 
+  
+  // Otra forma de hacerlo con la función handleSubmit:
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   console.log(email, password, confirmPassword);
@@ -88,6 +90,7 @@ const Registro = () => {
   return (
     <>
       <Form onSubmit={handleSubmit(onSubmit)}>
+        {/* El forma tiene que tener el onSubmit para trabajar con la función handleSubmit */}
         <Form.Group className="mt-4">
           <Form.Label>Nombre</Form.Label>
           <Form.Control

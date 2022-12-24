@@ -8,13 +8,15 @@ import { userContext } from "../context/UserProvider";
 
 const Rutas = () => {
 
-  const {user} = useContext(userContext)
+  const {user} = useContext(userContext);
   return (
     <>
       <Routes>
+        {/* Ruta protegida: Si los datos de usuario es correcto (true) nos manda a home, sino a registro? */}
+        {user ? (<Route path="/" element={<Home />} />) : (<Route path="/registro" element={<Registro />} />) }
         
         {/* Cuando tenga las siguiente rutas, nos envía al componente home, registro, sobre nosotros etc.  */}
-        <Route path="/" element={<Home />} />
+        // <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         {/* En vez de Dashboard tendría que tener el path de sobre nosotro */}
         <Route path="/dashboard" element={<Dashboard />} />
