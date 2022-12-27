@@ -69,7 +69,7 @@ const Login = () => {
             placeholder="Password"
           />
         </Form.Group>
-        <Button class="botonlogin" variant="outline-success" type="submit">
+        <Button className="botonlogin" variant="outline-success" type="submit">
           Submit
         </Button>
       </Form>

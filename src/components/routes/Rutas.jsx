@@ -12,11 +12,13 @@ const Rutas = () => {
   return (
     <>
       <Routes>
-        {/* Ruta protegida: Si los datos de usuario es correcto (true) nos manda a home, sino a registro? */}
+        {/* Hay que definir una página de arribo y diferenciarla de la página home del usuario */}
+        {/* Ruta protegida: Si los datos de usuario es correcto (true) nos manda a home, sino a registro */}
+
         {user ? (<Route path="/" element={<Home />} />) : (<Route path="/registro" element={<Registro />} />) }
         
         {/* Cuando tenga las siguiente rutas, nos envía al componente home, registro, sobre nosotros etc.  */}
-        // <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         {/* En vez de Dashboard tendría que tener el path de sobre nosotro */}
         <Route path="/dashboard" element={<Dashboard />} />

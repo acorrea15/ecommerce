@@ -20,7 +20,7 @@ export const Navegador = () => {
 
   return (
     <>
-      <Navbar class="navbar" bg="ligth" expand="lg">
+      <Navbar className="navbar" bg="ligth" expand="lg">
         <Container>
           <Navbar.Brand href="#home">E Commerce 5I</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -38,7 +38,7 @@ export const Navegador = () => {
                   Tecnología y computación
                 </NavDropdown.Item>
               </NavDropdown>
-              <Button class="botonlogin" variant="outline-success" onClick={() => setShowLogin(true)}>
+              <Button className="botonlogin" variant="outline-success" onClick={() => setShowLogin(true)}>
                 Login
               </Button>
             </Nav>
@@ -58,7 +58,7 @@ export const Navegador = () => {
             ¿Aun no estas registrado?   {" "}
             <a onClick={() => [setShowLogin(false), setShowRegistro(true)]}>Hacé Click <b>aquí</b></a>{" "}
           </p>
-          <Button class="botonlogin" variant="outline-success" onClick={() => setShowLogin(false)}>
+          <Button className="botonlogin" variant="outline-success" onClick={() => setShowLogin(false)}>
             Cerrar
           </Button>{" "}
         </Modal.Footer>

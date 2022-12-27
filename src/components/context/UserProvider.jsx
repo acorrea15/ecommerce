@@ -10,18 +10,21 @@ const UserProvider = ({ children }) => {
   // creación de un state para los usuarios:
   const [user, setUser] = useState("");
 
+  let email = "trasdf@Gmail.com"
+  let password = "123456.aA"
+  
+  const registroUser = {
+    email,
+    password,
+  };
   const loginUsuario = (email, password) => {
     //    Creación de un objeto con los datos de usuario. Función que permite guardar los datos del usuario. Estos datos se guardan
     // En el SetUser
-    const registroUser = {
-      email,
-      password,
-    };
     setUser(registroUser);
     // Creación de local storage para almacenar los usuarios porque éstos no están almacenados en una base de datos: almacena lo que se inserta en el registroUser
-    localStorage.setItem("registroUser"), JSON.stringify(registroUser)
+    localStorage.setItem("registroUser", JSON.stringify(registroUser))
   };
-
+  
   return (
     // El provider es el proveedor. Aquí ponemos los datos que queremos pasar. Disponibilizamos los children dentro
     // del componente userContext.Provider. No hace falta poner props x props (usuario, pass, etc) con poner children pasa todos los datos.
