@@ -7,6 +7,7 @@ import {
   Button,
   Modal,
 } from "react-bootstrap";
+import { userContext } from "../context/UserProvider";
 import Login from "../login/Login";
 import Registro from "../registro/Registro";
 import css from "./navegacion.css"
@@ -16,6 +17,10 @@ export const Navegador = () => {
   const [showRegistro, setShowRegistro] = useState(false);
 
   const handleCloseRegistro = () => setShowRegistro(false);
+  // const {user,logoutUsuario} = userContext(userContext)
+
+
+
 
 
   return (
@@ -41,6 +46,18 @@ export const Navegador = () => {
               <Button className="botonlogin" variant="outline-success" onClick={() => setShowLogin(true)}>
                 Login
               </Button>
+              {/* <Button className="botonlogin" variant="outline-success" onClick={() => logoutUsuario()}>
+                Cerrar sesión
+              </Button> */}
+              {/* FALTA LO FUNCIÓN LOGOUT hecha en función de  BASE DE DATOS */}
+              {/* Botones combinados con lógica para que aparezcan alternativamente en el navegador según el usuario esté o no logueado:  */}
+              {/* {user ? <Button className="botonlogin" variant="outline-success" onClick={() => logoutUsuario()}>
+                Cerrar sesión
+              </Button> : <Button className="botonlogin" variant="outline-success" onClick={() => setShowLogin(true)}>
+                Login
+              </Button> } */}
+              
+
             </Nav>
           </Navbar.Collapse>
         </Container>

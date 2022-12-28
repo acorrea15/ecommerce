@@ -10,6 +10,8 @@ const UserProvider = ({ children }) => {
   // creación de un state para los usuarios:
   const [user, setUser] = useState("");
 
+
+// Pongo email y pass provisorios para que no salte un error en la carga de la página"
   let email = "trasdf@Gmail.com"
   let password = "123456.aA"
   
@@ -24,13 +26,19 @@ const UserProvider = ({ children }) => {
     // Creación de local storage para almacenar los usuarios porque éstos no están almacenados en una base de datos: almacena lo que se inserta en el registroUser
     localStorage.setItem("registroUser", JSON.stringify(registroUser))
   };
+
+  const logOutUsuario = () => {
+    setUser(null);
+    return alert("Usuario deslogueado");
+  }
   
   return (
     // El provider es el proveedor. Aquí ponemos los datos que queremos pasar. Disponibilizamos los children dentro
     // del componente userContext.Provider. No hace falta poner props x props (usuario, pass, etc) con poner children pasa todos los datos.
     // Dentro de la etiqueta value van los datos que compartimos/disponibilizamos: en este caso los usuarios y la función loginUsuario
+    // VERIFICAR SI LAS FUNCIONES TIENEN ESOS NOMBRES EN EL ARCHIVO REGISTRO.JSX AL TRABAJAR CON LA BASE DE DATOS. 
     // Con lo siguiente decimos: userContext es nuestro proveedor de datos.
-    <userContext.Provider value={{ user, loginUsuario, registroUser }}>
+    <userContext.Provider value={{ user, loginUsuario, registroUser, logOutUsuario }}>
       {children}
     </userContext.Provider>
   );
