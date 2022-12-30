@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Registro from "../registro/Registro";
 import Dashboard from "../pages/Dashboard";
 import { userContext } from "../context/UserProvider";
+import NotFound from "../404/NotFound";
 
 
 const Rutas = () => {
@@ -22,6 +23,8 @@ const Rutas = () => {
         <Route path="/home" element={<Home />} />
         {/* En vez de Dashboard tendría que tener el path de sobre nosotro */}
         <Route path="/dashboard" element={<Dashboard />} />
+        {/* Asterisco para que, cuando no exista ninguno de los patch anteriores me mande directamente al 404.  */}
+        <Route patch="*" element={<NotFound/>}  />
       </Routes>
       <Routes>
         <Route path="/registro" element={<Registro />} />
